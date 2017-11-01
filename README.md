@@ -17,5 +17,13 @@
         }
     }
 ```
+*  grid 区域是否包含坐标轴的刻度标签。  
+默认为false，一般设置为true。
+```
+    grid: {
+        containLabel: true
+    }
+```
+* 
     
     
