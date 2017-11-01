@@ -99,6 +99,39 @@ boolean
     xAxis: {
         splitLine: {show: false}
     }
-```    
-    
-    
+```
+* toolbox里的数据视图是否可编辑  
+boolean  
+  [ default: false ]  
+```
+    toolbox: {
+        show: true,
+        feature: {
+            dataView: {readOnly: false}
+        }
+    }
+ ```
+ * 使用的 x 轴的 index，在单个图表实例中存在多个 x 轴的时候有用。  
+ yAxisIndex 同理。  
+ number  
+   [ default: 0 ]  
+   
+ ```
+     series: [
+         {
+             xAxisIndex: 1
+         }
+     ]
+ ```
+ * 是否平滑曲线显示。  
+ boolean  
+   [ default: false ]
+   
+ ```
+     series: [
+         {
+             type:'line',
+             smooth: true
+         }
+     ]
+ ```
