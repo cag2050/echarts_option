@@ -141,7 +141,7 @@ boolean
          }
      ]
  ```
- * dataZoom 有3种类型：inside，slider，toolbox中的dataZoom:toolbox.feature.dataZoom  
+* dataZoom 有3种类型：inside，slider，toolbox中的dataZoom:toolbox.feature.dataZoom  
  dataZoom 的数据窗口范围的设置，目前支持两种形式：  
  1. 百分比形式：即设置 dataZoom.start 和 dataZoom.end。  
  范围是：0 ~ 100。表示 0% ~ 100%。
@@ -157,4 +157,18 @@ boolean
          end: 10
      }]
  ```
- * 数据堆叠（stack），同个类目轴上系列配置相同的stack值后，后一个系列的值会在前一个系列的值上相加。
+* 数据堆叠（stack），同个类目轴上系列配置相同的stack值后，后一个系列的值会在前一个系列的值上相加。
+* 坐标轴刻度相关设置:  alignWithLabel  
+ boolean  
+   [ default: false ]  
+类目轴中在 boundaryGap 为 true 的时候有效，可以保证刻度线和标签对齐。
+ ```  
+     xAxis : [
+         {
+             type : 'category',
+             axisTick: {
+                 alignWithLabel: true
+             }
+         }
+     ]
+ ```    
