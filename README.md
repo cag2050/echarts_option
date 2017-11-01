@@ -139,7 +139,12 @@ boolean
  * dataZoom 有3种类型：inside，slider，toolbox中的dataZoom:toolbox.feature.dataZoom  
  dataZoom 的数据窗口范围的设置，目前支持两种形式：  
  1. 百分比形式：即设置 dataZoom.start 和 dataZoom.end。  
- 2. 绝对数值形式：即设置 dataZoom.startValue 和 dataZoom.endValue。
+ 范围是：0 ~ 100。表示 0% ~ 100%。
+ 2. 绝对数值形式：即设置 dataZoom.startValue 和 dataZoom.endValue。  
+   number, string, Date  
+   [ default: null ]  
+ 用 绝对数值 的形式定义了数据窗口范围。  
+ 注意，如果轴的类型为 category，则 startValue 既可以设置为 axis.data 数组的 index，也可以设置为数组值本身。 但是如果设置为数组值本身，会在内部自动转化为数组的 index。
  ```
      dataZoom: [{
          type: 'slider',
