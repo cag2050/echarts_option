@@ -112,7 +112,8 @@ boolean
     }
  ```
  * 使用的 x 轴的 index，在单个图表实例中存在多个 x 轴的时候有用。  
- yAxisIndex 同理。  
+ yAxisIndex 同理。 
+ 取值可以是：0、1、2...  
  number  
    [ default: 0 ]  
    
