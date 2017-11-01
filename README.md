@@ -9,11 +9,16 @@
         }
     }]
 ```
-* 提示指示器类型
+* 坐标轴指示器配置项。  
+type:指示器类型  
+label:坐标轴指示器的文本标签。
 ```
     tooltip: {
         axisPointer: {
-            type: 'cross' // 3个可选值：line | shadow | cross
+            type: 'cross', // 3个可选值：line|shadow|cross
+            label: {
+                backgroundColor: '#6a7985'
+            }            
         }
     }
 ```
