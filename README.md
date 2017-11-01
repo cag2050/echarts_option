@@ -135,3 +135,14 @@ boolean
          }
      ]
  ```
+ * dataZoom 有3种类型：inside，slider，toolbox中的dataZoom:toolbox.feature.dataZoom  
+ dataZoom 的数据窗口范围的设置，目前支持两种形式：  
+ 1. 百分比形式：即设置 dataZoom.start 和 dataZoom.end。  
+ 2. 绝对数值形式：即设置 dataZoom.startValue 和 dataZoom.endValue。
+ ```
+     dataZoom: [{
+         type: 'slider',
+         start: 0,
+         end: 10
+     }]
+ ```    
