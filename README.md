@@ -4,7 +4,7 @@
     yAxis: [{
         axisLine: {
             lineStyle: {
-                color: colors[0]
+                color: 'blue'
             }
         }
     }]
