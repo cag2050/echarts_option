@@ -158,7 +158,9 @@ boolean
          end: 10
      }]
  ```
-* 数据堆叠（stack），同个类目轴上系列配置相同的stack值后，后一个系列的值会在前一个系列的值上相加。
+* series[i]-line.stack string  
+[ default: null ]  
+数据堆叠，同个类目轴上系列配置相同的stack值后，后一个系列的值会在前一个系列的值上相加。  
 * 坐标轴刻度相关设置:  alignWithLabel  
  boolean  
    [ default: false ]  
