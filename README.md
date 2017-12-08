@@ -193,4 +193,13 @@ tooltip: {
     }
 }
 ```
+* zoomLock: true，锁定区域缩放；只能操作滑动条进行平移，不能上下移动触控板进行缩放
+```
+    dataZoom: [{
+        type: 'slider',
+        start: 0,
+        end: 100,
+        zoomLock: true
+    }]
+```
  
