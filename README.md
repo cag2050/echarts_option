@@ -202,7 +202,7 @@ tooltip: {
         zoomLock: true
     }]
 ```
-* 全部显示x轴上的标签，设为true即可。  
+* showAllSymbol：全部显示x轴上的标签，设为true即可。  
 series[i]-line.showAllSymbol boolean  
   [ default: false ]  
   标志图形默认只有主轴显示（随主轴标签间隔隐藏策略），如需全部显示可把 showAllSymbol 设为 true。
