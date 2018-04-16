@@ -1,5 +1,5 @@
 ### echarts option 的设置
-* 去掉折线上面的小圆点
+* 去掉折线上面的小圆点：只需要加上`symbol: "none"`即可
 ```
 series:[{
     symbol: "none",
