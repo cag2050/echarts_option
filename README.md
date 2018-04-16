@@ -1,4 +1,13 @@
 ### echarts option 的设置
+* 去掉折线上面的小圆点
+```
+series:[{
+    symbol: "none",
+    name: "seriesName",
+    type: "line",
+    data: seriesData
+}]
+```
 * 设置坐标轴的颜色
 ```
     yAxis: [{
