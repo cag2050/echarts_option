@@ -20,6 +20,15 @@ json方式引入，需要注册下：`IEcharts.registerMap()`
 * 注意：不管是js方式还是json方式引入，中国地图的map值为 ‘china’ ，世界地图的map值为 ‘world’。
 
 ### echarts option 的设置
+* 去掉折线上面的小圆点：只需要加上`symbol: "none"`即可
+```
+series:[{
+    symbol: "none",
+    name: "seriesName",
+    type: "line",
+    data: seriesData
+}]
+```
 * 设置坐标轴的颜色
 ```
     yAxis: [{
