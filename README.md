@@ -1,3 +1,33 @@
+* 地图名称重叠
+有限空间不够显示客观存在，解决方法很多：
+1. 可以把地图放大（无法根本解决）
+2. 文字hover显示，不必默认显示（建议）。
+https://github.com/apache/incubator-echarts/issues/64
+
+* 地图名称重叠
+1. 如果空间够，可以自己定义textFix参数，或者指定文本位置放开（官方好像已不支持textFix）。
+2. 如果是太小地图就不可避免，无法同时显示，改成hover时显示是常见的作法。
+3. 还可以通过markLine从目标地方引出一条线到别的地方显示文本，类似pie的作法，需要自己写点markPoint的代码，无内置。
+https://github.com/apache/incubator-echarts/issues/1105
+
+* 修正地图城市名字偏移量：
+除了修改地图json 还有其他方法吗？[中国地图标注重叠问题](https://github.com/apache/incubator-echarts/issues/1535) 中提到的方法都失效了。
+https://github.com/apache/incubator-echarts/issues/2418
+
+* 地图名称重叠：把 geoJson 中每个省份的 center 去掉就会自动取中心位置了。
+https://github.com/apache/incubator-echarts/issues/4275
+
+* echarts 3 默认是按照省会的位置来显示名称的，省会位置定义在 geo 文件中，如果不需要的话按照下面代码去掉定义的省会，默认会采用地理位置的重点，注意需要在地图注册之后， setOption 之前使用
+  ```
+  echarts.getMap('上海').geoJson.features.forEach(function (feature) {
+    // Remove cp
+    feature.properties.cp = null;
+  });
+  ```
+  或者根据需要微调 cp 也行，3 里 geoJson 也可以当做数据来处理。
+  1. https://github.com/apache/incubator-echarts/issues/3230
+  2. https://github.com/apache/incubator-echarts/issues/4379
+
 ### [vue-echarts-v3](https://github.com/xlsdg/vue-echarts-v3) 引入地图资源的2种方式：
 echarts 官方说明：http://echarts.baidu.com/option.html#geo.map
 * 1.js方式
