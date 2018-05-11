@@ -1,3 +1,12 @@
+* Echarts tooltip文字左对齐:
+```
+tooltip: {
+    textStyle: {
+        align: 'left'
+    }
+}
+```
+
 * 地图名称重叠
 有限空间不够显示客观存在，解决方法很多：
 1. 可以把地图放大（无法根本解决）
