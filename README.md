@@ -1,3 +1,44 @@
+* echarts 地图，隐藏南海诸岛：
+1. geo 中设置 regions：
+```
+geo: [{
+    name: '地图',
+    type: 'map',
+    map: 'china',
+    regions: [
+        {
+            name: '南海诸岛',
+            value: 0,
+            itemStyle: {
+                normal: {
+                    opacity: 0,
+                    label: {
+                        show: false
+                    }
+                }
+            }
+        }
+    ],
+    roam: false,
+    selectedMode: 'single'
+}]
+```
+2. series data 中设置：
+```
+this.mapOption.series[0].data.push({
+    name: '南海诸岛',
+    value: 0,
+    'itemStyle': {
+        'normal': {
+            'opacity': 0,
+            label: {
+                show: false
+            }
+        }
+    }
+})
+```
+
 * Echarts tooltip文字左对齐:
 ```
 tooltip: {
